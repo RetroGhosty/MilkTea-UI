@@ -36,7 +36,7 @@ Partial Class Form1
         Button1 = New Button()
         Label1 = New Label()
         checkoutPnl = New Panel()
-        Label4 = New Label()
+        checkOut_Btn = New Button()
         TopPanel.SuspendLayout()
         Panel1.SuspendLayout()
         checkoutPnl.SuspendLayout()
@@ -182,7 +182,7 @@ Partial Class Form1
         ' 
         ' checkoutPnl
         ' 
-        checkoutPnl.Controls.Add(Label4)
+        checkoutPnl.Controls.Add(checkOut_Btn)
         checkoutPnl.Dock = DockStyle.Fill
         checkoutPnl.Location = New Point(545, 80)
         checkoutPnl.Name = "checkoutPnl"
@@ -190,14 +190,14 @@ Partial Class Form1
         checkoutPnl.TabIndex = 3
         checkoutPnl.Visible = False
         ' 
-        ' Label4
+        ' checkOut_Btn
         ' 
-        Label4.AutoSize = True
-        Label4.Location = New Point(31, 64)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(41, 15)
-        Label4.TabIndex = 0
-        Label4.Text = "Label4"
+        checkOut_Btn.Location = New Point(177, 311)
+        checkOut_Btn.Name = "checkOut_Btn"
+        checkOut_Btn.Size = New Size(75, 23)
+        checkOut_Btn.TabIndex = 1
+        checkOut_Btn.Text = "Check Out"
+        checkOut_Btn.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
@@ -214,7 +214,6 @@ Partial Class Form1
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         checkoutPnl.ResumeLayout(False)
-        checkoutPnl.PerformLayout()
         ResumeLayout(False)
     End Sub
     Friend WithEvents TopPanel As Panel
@@ -231,5 +230,5 @@ Partial Class Form1
     Friend WithEvents Check_CreamPuff As CheckBox
     Friend WithEvents Check_CocoJelly As CheckBox
     Friend WithEvents Check_Pearl As CheckBox
-    Friend WithEvents Label4 As Label
+    Friend WithEvents checkOut_Btn As Button
 End Class
