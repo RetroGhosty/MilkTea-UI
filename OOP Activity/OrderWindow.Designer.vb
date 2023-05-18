@@ -25,6 +25,8 @@ Partial Class OrderWindow
         TopPanel = New Panel()
         TopPanelHeader_Text = New Label()
         Panel1 = New Panel()
+        Button1 = New Button()
+        Label4 = New Label()
         Check_CreamPuff = New CheckBox()
         Check_CocoJelly = New CheckBox()
         Check_Pearl = New CheckBox()
@@ -67,6 +69,8 @@ Partial Class OrderWindow
         ' 
         ' Panel1
         ' 
+        Panel1.Controls.Add(Button1)
+        Panel1.Controls.Add(Label4)
         Panel1.Controls.Add(Check_CreamPuff)
         Panel1.Controls.Add(Check_CocoJelly)
         Panel1.Controls.Add(Check_Pearl)
@@ -82,6 +86,24 @@ Partial Class OrderWindow
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(545, 346)
         Panel1.TabIndex = 2
+        ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(359, 49)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(75, 23)
+        Button1.TabIndex = 12
+        Button1.Text = "Button1"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(359, 82)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(41, 15)
+        Label4.TabIndex = 11
+        Label4.Text = "Label4"
         ' 
         ' Check_CreamPuff
         ' 
@@ -272,4 +294,6 @@ Partial Class OrderWindow
     Friend WithEvents totalPrice_Label As Label
     Friend WithEvents totalPrice_Value As Label
     Friend WithEvents ClearTray_Btn As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Button1 As Button
 End Class

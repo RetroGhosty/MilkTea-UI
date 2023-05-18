@@ -1,24 +1,16 @@
-﻿Imports Newtonsoft.Json
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox
+Imports Newtonsoft.Json
 
 Public Class OrderWindow
     Public milkTeaPrice As New Menu()
     Dim tempMilkTeaPrice As Integer
     Public AddOnList As New List(Of AddOns)
-    Public cart As ShoppingCart
-
     Private Sub ClearFields()
-        If cart Is Nothing Then
-            cart = New ShoppingCart()
-            cart.ShoppingItem = New List(Of OrderModel)
-        End If
-
         Check_CocoJelly.CheckState = False
         Check_CreamCheese.CheckState = False
         Check_CreamPuff.CheckState = False
         Check_Pearl.CheckState = False
         AddOnList.Clear()
-        cart.ShoppingItem.Clear()
-
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -31,10 +23,23 @@ Public Class OrderWindow
         TopPanel.BackColor = colorSet.PrimaryColor
         TopPanelHeader_Text.ForeColor = colorSet.PrimaryText
         checkoutPnl.BackColor = colorSet.SecondaryBtnColor
-        milkTeaPrice.SetAListOfMilkName()
+
+        Dim ViewModelOrder As ItemStorage = New ItemStorage()
+        Dim milkTeaNames As List(Of TypeOfMilkTea) = ViewModelOrder.MilkTeaNameList
+        'milkTeaNames.Add(New TypeOfMilkTea("Bro", 50))
+        ViewModelOrder.MilkTeaNameList = milkTeaNames
+
     End Sub
 
-    ''START CODING BELOW
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        MainWindow.Show()
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    ''START CODING BELOW THIS LINE
     ''testttssss
 
 End Class

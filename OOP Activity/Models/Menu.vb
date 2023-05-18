@@ -4,15 +4,6 @@
 
     Public milkteaList As New List(Of TypeOfMilkTea)
 
-    Public Sub SetAListOfMilkName()
-        milkteaList.Add(New TypeOfMilkTea("Classic Milk Tea", 60))
-        milkteaList.Add(New TypeOfMilkTea("Pearl Milk Tea", 65))
-        milkteaList.Add(New TypeOfMilkTea("Honey Milk Tea", 80))
-        milkteaList.Add(New TypeOfMilkTea("Grass Jelly Milk Tea", 95))
-        milkteaList.Add(New TypeOfMilkTea("Pudding Milk Tea", 80))
-        milkteaList.Add(New TypeOfMilkTea("Red Bean Milk Tea", 90))
-        milkteaList.Add(New TypeOfMilkTea("Aloe Vera Milk Tea", 100))
-    End Sub
 
     Public Function MilkTeaPriceBasedOnSize(ByVal milkTeaNameStr As String, ByVal sizeStr As String)
         For Each eachMilkTea As TypeOfMilkTea In milkteaList
