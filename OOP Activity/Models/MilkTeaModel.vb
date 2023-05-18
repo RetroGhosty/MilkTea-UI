@@ -1,4 +1,4 @@
-﻿Public Class TypeOfMilkTea
+﻿Public Class MilkTeaModel
     Public Property MilkTeaName
     Public Property MilkTeaPrice
 
