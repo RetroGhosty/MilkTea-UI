@@ -24,29 +24,28 @@ Partial Class OrderWindow
     Private Sub InitializeComponent()
         TopPanel = New Panel()
         TopPanelHeader_Text = New Label()
-        Panel1 = New Panel()
-        CheckBox1 = New CheckBox()
-        Check_CreamPuff = New CheckBox()
-        Check_CocoJelly = New CheckBox()
-        Check_Pearl = New CheckBox()
-        Check_CreamCheese = New CheckBox()
-        Label3 = New Label()
-        ComboBox2 = New ComboBox()
-        Label2 = New Label()
-        ComboBox1 = New ComboBox()
-        CreateMilkTea_Btn = New Button()
-        Label1 = New Label()
         ClearTray_Btn = New Button()
-        checkoutPnl = New Panel()
         totalPrice_Value = New Label()
         totalPrice_Label = New Label()
         CheckOut_Btn = New Button()
-        Label4 = New Label()
+        Label1 = New Label()
+        CreateMilkTea_Btn = New Button()
+        ComboBox1 = New ComboBox()
+        Label2 = New Label()
+        ComboBox2 = New ComboBox()
+        Label3 = New Label()
+        CheckBox1 = New CheckBox()
         CheckBox2 = New CheckBox()
         CheckBox3 = New CheckBox()
         CheckBox4 = New CheckBox()
         CheckBox5 = New CheckBox()
-        CheckBox6 = New CheckBox()
+        Label4 = New Label()
+        RadioButton1 = New RadioButton()
+        RadioButton2 = New RadioButton()
+        RadioButton3 = New RadioButton()
+        RadioButton4 = New RadioButton()
+        RadioButton5 = New RadioButton()
+        Panel1 = New Panel()
         TopPanel.SuspendLayout()
         Panel1.SuspendLayout()
         SuspendLayout()
@@ -58,168 +57,18 @@ Partial Class OrderWindow
         TopPanel.Dock = DockStyle.Top
         TopPanel.Location = New Point(0, 0)
         TopPanel.Name = "TopPanel"
-        TopPanel.Size = New Size(809, 80)
+        TopPanel.Size = New Size(907, 80)
         TopPanel.TabIndex = 1
         ' 
         ' TopPanelHeader_Text
         ' 
         TopPanelHeader_Text.AutoSize = True
         TopPanelHeader_Text.Font = New Font("Cooper Black", 36F, FontStyle.Regular, GraphicsUnit.Point)
-        TopPanelHeader_Text.Location = New Point(256, 9)
+        TopPanelHeader_Text.Location = New Point(277, 9)
         TopPanelHeader_Text.Name = "TopPanelHeader_Text"
         TopPanelHeader_Text.Size = New Size(369, 55)
         TopPanelHeader_Text.TabIndex = 0
         TopPanelHeader_Text.Text = "It's Boba time!"
-        ' 
-        ' Panel1
-        ' 
-        Panel1.Controls.Add(CheckBox6)
-        Panel1.Controls.Add(CheckBox5)
-        Panel1.Controls.Add(CheckBox4)
-        Panel1.Controls.Add(CheckBox3)
-        Panel1.Controls.Add(CheckBox2)
-        Panel1.Controls.Add(Label4)
-        Panel1.Controls.Add(CheckBox1)
-        Panel1.Controls.Add(Check_CreamPuff)
-        Panel1.Controls.Add(Check_CocoJelly)
-        Panel1.Controls.Add(Check_Pearl)
-        Panel1.Controls.Add(Check_CreamCheese)
-        Panel1.Controls.Add(Label3)
-        Panel1.Controls.Add(ComboBox2)
-        Panel1.Controls.Add(Label2)
-        Panel1.Controls.Add(ComboBox1)
-        Panel1.Controls.Add(CreateMilkTea_Btn)
-        Panel1.Controls.Add(Label1)
-        Panel1.Dock = DockStyle.Left
-        Panel1.Location = New Point(0, 80)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(809, 346)
-        Panel1.TabIndex = 2
-        ' 
-        ' CheckBox1
-        ' 
-        CheckBox1.AutoSize = True
-        CheckBox1.Font = New Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        CheckBox1.ForeColor = Color.Plum
-        CheckBox1.Location = New Point(445, 221)
-        CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(134, 27)
-        CheckBox1.TabIndex = 11
-        CheckBox1.Text = "Nata de Coco"
-        CheckBox1.UseVisualStyleBackColor = True
-        ' 
-        ' Check_CreamPuff
-        ' 
-        Check_CreamPuff.AutoSize = True
-        Check_CreamPuff.Font = New Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Check_CreamPuff.ForeColor = Color.Plum
-        Check_CreamPuff.Location = New Point(322, 221)
-        Check_CreamPuff.Name = "Check_CreamPuff"
-        Check_CreamPuff.Size = New Size(117, 27)
-        Check_CreamPuff.TabIndex = 10
-        Check_CreamPuff.Text = "Cream Puff"
-        Check_CreamPuff.UseVisualStyleBackColor = True
-        ' 
-        ' Check_CocoJelly
-        ' 
-        Check_CocoJelly.AutoSize = True
-        Check_CocoJelly.Font = New Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Check_CocoJelly.ForeColor = Color.Plum
-        Check_CocoJelly.Location = New Point(522, 196)
-        Check_CocoJelly.Name = "Check_CocoJelly"
-        Check_CocoJelly.Size = New Size(107, 27)
-        Check_CocoJelly.TabIndex = 9
-        Check_CocoJelly.Text = "Coco Jelly"
-        Check_CocoJelly.UseVisualStyleBackColor = True
-        ' 
-        ' Check_Pearl
-        ' 
-        Check_Pearl.AutoSize = True
-        Check_Pearl.Font = New Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Check_Pearl.ForeColor = Color.Plum
-        Check_Pearl.Location = New Point(398, 196)
-        Check_Pearl.Name = "Check_Pearl"
-        Check_Pearl.Size = New Size(112, 27)
-        Check_Pearl.TabIndex = 8
-        Check_Pearl.Text = "Boba Pearl"
-        Check_Pearl.UseVisualStyleBackColor = True
-        ' 
-        ' Check_CreamCheese
-        ' 
-        Check_CreamCheese.AutoSize = True
-        Check_CreamCheese.Font = New Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Check_CreamCheese.ForeColor = Color.Plum
-        Check_CreamCheese.Location = New Point(256, 196)
-        Check_CreamCheese.Name = "Check_CreamCheese"
-        Check_CreamCheese.Size = New Size(136, 27)
-        Check_CreamCheese.TabIndex = 7
-        Check_CreamCheese.Text = "Cream cheese"
-        Check_CreamCheese.UseVisualStyleBackColor = True
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.FlatStyle = FlatStyle.Flat
-        Label3.Font = New Font("Cooper Black", 20.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label3.ForeColor = Color.Thistle
-        Label3.Location = New Point(390, 159)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(126, 31)
-        Label3.TabIndex = 6
-        Label3.Text = "Add ons"
-        ' 
-        ' ComboBox2
-        ' 
-        ComboBox2.FormattingEnabled = True
-        ComboBox2.Items.AddRange(New Object() {"Small", "Medium", "Large"})
-        ComboBox2.Location = New Point(385, 122)
-        ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(131, 23)
-        ComboBox2.TabIndex = 5
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.FlatStyle = FlatStyle.Flat
-        Label2.Font = New Font("Cooper Black", 20.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label2.ForeColor = Color.Thistle
-        Label2.Location = New Point(417, 88)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(77, 31)
-        Label2.TabIndex = 4
-        Label2.Text = "Size:"
-        ' 
-        ' ComboBox1
-        ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"Classic Milk Tea", "Pearl Milk Tea", "Honey Milk Tea", "Grass Jelly Milk Tea", "Pudding Milk Tea", "Red Bean Milk Tea", "Aloe Vera Milk Tea"})
-        ComboBox1.Location = New Point(322, 49)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(223, 23)
-        ComboBox1.TabIndex = 3
-        ' 
-        ' CreateMilkTea_Btn
-        ' 
-        CreateMilkTea_Btn.Font = New Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        CreateMilkTea_Btn.ForeColor = Color.Indigo
-        CreateMilkTea_Btn.Location = New Point(638, 304)
-        CreateMilkTea_Btn.Name = "CreateMilkTea_Btn"
-        CreateMilkTea_Btn.Size = New Size(159, 30)
-        CreateMilkTea_Btn.TabIndex = 2
-        CreateMilkTea_Btn.Text = "Create Milk Tea"
-        CreateMilkTea_Btn.UseVisualStyleBackColor = True
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.FlatStyle = FlatStyle.Flat
-        Label1.Font = New Font("Cooper Black", 20.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label1.ForeColor = Color.Thistle
-        Label1.Location = New Point(299, 15)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(280, 31)
-        Label1.TabIndex = 0
-        Label1.Text = "Choose your flavor:"
         ' 
         ' ClearTray_Btn
         ' 
@@ -228,20 +77,6 @@ Partial Class OrderWindow
         ClearTray_Btn.Size = New Size(101, 40)
         ClearTray_Btn.TabIndex = 11
         ClearTray_Btn.Text = "Clear Tray"
-        ClearTray_Btn.UseVisualStyleBackColor = True
-        ' 
-        ' checkoutPnl
-        ' 
-        checkoutPnl.Controls.Add(ClearTray_Btn)
-        checkoutPnl.Controls.Add(totalPrice_Value)
-        checkoutPnl.Controls.Add(totalPrice_Label)
-        checkoutPnl.Controls.Add(CheckOut_Btn)
-        checkoutPnl.Dock = DockStyle.Fill
-        checkoutPnl.Location = New Point(809, 80)
-        checkoutPnl.Name = "checkoutPnl"
-        checkoutPnl.Size = New Size(0, 346)
-        checkoutPnl.TabIndex = 3
-        checkoutPnl.Visible = False
         ' 
         ' totalPrice_Value
         ' 
@@ -274,82 +109,220 @@ Partial Class OrderWindow
         CheckOut_Btn.Text = "Check Out"
         CheckOut_Btn.UseVisualStyleBackColor = True
         ' 
-        ' Label4
+        ' Label1
         ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Cooper Black", 20.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Label4.ForeColor = Color.Thistle
-        Label4.Location = New Point(86, 263)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(165, 31)
-        Label4.TabIndex = 12
-        Label4.Text = "Sweetness:"
+        Label1.AutoSize = True
+        Label1.FlatStyle = FlatStyle.Flat
+        Label1.Font = New Font("Cooper Black", 20.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label1.ForeColor = Color.Thistle
+        Label1.Location = New Point(12, 15)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(280, 31)
+        Label1.TabIndex = 0
+        Label1.Text = "Choose your flavor:"
+        ' 
+        ' CreateMilkTea_Btn
+        ' 
+        CreateMilkTea_Btn.Font = New Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        CreateMilkTea_Btn.ForeColor = Color.Indigo
+        CreateMilkTea_Btn.Location = New Point(381, 368)
+        CreateMilkTea_Btn.Name = "CreateMilkTea_Btn"
+        CreateMilkTea_Btn.Size = New Size(159, 30)
+        CreateMilkTea_Btn.TabIndex = 2
+        CreateMilkTea_Btn.Text = "Create Milk Tea"
+        CreateMilkTea_Btn.UseVisualStyleBackColor = True
+        ' 
+        ' ComboBox1
+        ' 
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(12, 49)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(223, 23)
+        ComboBox1.TabIndex = 3
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.FlatStyle = FlatStyle.Flat
+        Label2.Font = New Font("Cooper Black", 20.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label2.ForeColor = Color.Thistle
+        Label2.Location = New Point(12, 75)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(77, 31)
+        Label2.TabIndex = 4
+        Label2.Text = "Size:"
+        ' 
+        ' ComboBox2
+        ' 
+        ComboBox2.FormattingEnabled = True
+        ComboBox2.Location = New Point(12, 109)
+        ComboBox2.Name = "ComboBox2"
+        ComboBox2.Size = New Size(131, 23)
+        ComboBox2.TabIndex = 5
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.FlatStyle = FlatStyle.Flat
+        Label3.Font = New Font("Cooper Black", 20.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label3.ForeColor = Color.Thistle
+        Label3.Location = New Point(12, 135)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(126, 31)
+        Label3.TabIndex = 6
+        Label3.Text = "Add ons"
+        ' 
+        ' CheckBox1
+        ' 
+        CheckBox1.AutoSize = True
+        CheckBox1.Font = New Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        CheckBox1.ForeColor = Color.Plum
+        CheckBox1.Location = New Point(12, 169)
+        CheckBox1.Name = "CheckBox1"
+        CheckBox1.Size = New Size(136, 27)
+        CheckBox1.TabIndex = 7
+        CheckBox1.Text = "Cream cheese"
+        CheckBox1.UseVisualStyleBackColor = True
         ' 
         ' CheckBox2
         ' 
         CheckBox2.AutoSize = True
-        CheckBox2.Font = New Font("Comic Sans MS", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
-        CheckBox2.ForeColor = Color.MediumPurple
-        CheckBox2.Location = New Point(268, 264)
+        CheckBox2.Font = New Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        CheckBox2.ForeColor = Color.Plum
+        CheckBox2.Location = New Point(154, 169)
         CheckBox2.Name = "CheckBox2"
-        CheckBox2.Size = New Size(62, 34)
-        CheckBox2.TabIndex = 13
-        CheckBox2.Text = "0%"
+        CheckBox2.Size = New Size(112, 27)
+        CheckBox2.TabIndex = 8
+        CheckBox2.Text = "Boba Pearl"
         CheckBox2.UseVisualStyleBackColor = True
         ' 
         ' CheckBox3
         ' 
         CheckBox3.AutoSize = True
-        CheckBox3.Font = New Font("Comic Sans MS", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
-        CheckBox3.ForeColor = Color.MediumPurple
-        CheckBox3.Location = New Point(336, 264)
+        CheckBox3.Font = New Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        CheckBox3.ForeColor = Color.Plum
+        CheckBox3.Location = New Point(272, 169)
         CheckBox3.Name = "CheckBox3"
-        CheckBox3.Size = New Size(75, 34)
-        CheckBox3.TabIndex = 14
-        CheckBox3.Text = "25%"
+        CheckBox3.Size = New Size(107, 27)
+        CheckBox3.TabIndex = 9
+        CheckBox3.Text = "Coco Jelly"
         CheckBox3.UseVisualStyleBackColor = True
         ' 
         ' CheckBox4
         ' 
         CheckBox4.AutoSize = True
-        CheckBox4.Font = New Font("Comic Sans MS", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
-        CheckBox4.ForeColor = Color.MediumPurple
-        CheckBox4.Location = New Point(417, 263)
+        CheckBox4.Font = New Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        CheckBox4.ForeColor = Color.Plum
+        CheckBox4.Location = New Point(12, 202)
         CheckBox4.Name = "CheckBox4"
-        CheckBox4.Size = New Size(75, 34)
-        CheckBox4.TabIndex = 15
-        CheckBox4.Text = "50%"
+        CheckBox4.Size = New Size(117, 27)
+        CheckBox4.TabIndex = 10
+        CheckBox4.Text = "Cream Puff"
         CheckBox4.UseVisualStyleBackColor = True
         ' 
         ' CheckBox5
         ' 
         CheckBox5.AutoSize = True
-        CheckBox5.Font = New Font("Comic Sans MS", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
-        CheckBox5.ForeColor = Color.MediumPurple
-        CheckBox5.Location = New Point(498, 263)
+        CheckBox5.Font = New Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        CheckBox5.ForeColor = Color.Plum
+        CheckBox5.Location = New Point(135, 202)
         CheckBox5.Name = "CheckBox5"
-        CheckBox5.Size = New Size(75, 34)
-        CheckBox5.TabIndex = 16
-        CheckBox5.Text = "75%"
+        CheckBox5.Size = New Size(134, 27)
+        CheckBox5.TabIndex = 11
+        CheckBox5.Text = "Nata de Coco"
         CheckBox5.UseVisualStyleBackColor = True
         ' 
-        ' CheckBox6
+        ' Label4
         ' 
-        CheckBox6.AutoSize = True
-        CheckBox6.Font = New Font("Comic Sans MS", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
-        CheckBox6.ForeColor = Color.MediumPurple
-        CheckBox6.Location = New Point(579, 260)
-        CheckBox6.Name = "CheckBox6"
-        CheckBox6.Size = New Size(88, 34)
-        CheckBox6.TabIndex = 17
-        CheckBox6.Text = "100%"
-        CheckBox6.UseVisualStyleBackColor = True
+        Label4.AutoSize = True
+        Label4.Font = New Font("Cooper Black", 20.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Label4.ForeColor = Color.Thistle
+        Label4.Location = New Point(12, 232)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(165, 31)
+        Label4.TabIndex = 12
+        Label4.Text = "Sweetness:"
+        ' 
+        ' RadioButton1
+        ' 
+        RadioButton1.AutoSize = True
+        RadioButton1.Location = New Point(12, 266)
+        RadioButton1.Name = "RadioButton1"
+        RadioButton1.Size = New Size(97, 19)
+        RadioButton1.TabIndex = 19
+        RadioButton1.Text = "RadioButton1"
+        RadioButton1.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton2
+        ' 
+        RadioButton2.AutoSize = True
+        RadioButton2.Location = New Point(115, 266)
+        RadioButton2.Name = "RadioButton2"
+        RadioButton2.Size = New Size(97, 19)
+        RadioButton2.TabIndex = 20
+        RadioButton2.Text = "RadioButton2"
+        RadioButton2.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton3
+        ' 
+        RadioButton3.AutoSize = True
+        RadioButton3.Location = New Point(218, 266)
+        RadioButton3.Name = "RadioButton3"
+        RadioButton3.Size = New Size(97, 19)
+        RadioButton3.TabIndex = 21
+        RadioButton3.Text = "RadioButton3"
+        RadioButton3.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton4
+        ' 
+        RadioButton4.AutoSize = True
+        RadioButton4.Location = New Point(12, 291)
+        RadioButton4.Name = "RadioButton4"
+        RadioButton4.Size = New Size(97, 19)
+        RadioButton4.TabIndex = 22
+        RadioButton4.Text = "RadioButton4"
+        RadioButton4.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton5
+        ' 
+        RadioButton5.AutoSize = True
+        RadioButton5.Location = New Point(115, 291)
+        RadioButton5.Name = "RadioButton5"
+        RadioButton5.Size = New Size(97, 19)
+        RadioButton5.TabIndex = 23
+        RadioButton5.Text = "RadioButton5"
+        RadioButton5.UseVisualStyleBackColor = True
+        ' 
+        ' Panel1
+        ' 
+        Panel1.Controls.Add(RadioButton5)
+        Panel1.Controls.Add(RadioButton4)
+        Panel1.Controls.Add(RadioButton3)
+        Panel1.Controls.Add(RadioButton2)
+        Panel1.Controls.Add(RadioButton1)
+        Panel1.Controls.Add(Label4)
+        Panel1.Controls.Add(CheckBox5)
+        Panel1.Controls.Add(CheckBox4)
+        Panel1.Controls.Add(CheckBox3)
+        Panel1.Controls.Add(CheckBox2)
+        Panel1.Controls.Add(CheckBox1)
+        Panel1.Controls.Add(Label3)
+        Panel1.Controls.Add(ComboBox2)
+        Panel1.Controls.Add(Label2)
+        Panel1.Controls.Add(ComboBox1)
+        Panel1.Controls.Add(CreateMilkTea_Btn)
+        Panel1.Controls.Add(Label1)
+        Panel1.Dock = DockStyle.Left
+        Panel1.Location = New Point(0, 80)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(907, 431)
+        Panel1.TabIndex = 2
         ' 
         ' OrderWindow
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(809, 426)
+        ClientSize = New Size(907, 511)
         Controls.Add(Panel1)
         Controls.Add(TopPanel)
         Name = "OrderWindow"
@@ -362,26 +335,26 @@ Partial Class OrderWindow
     End Sub
     Friend WithEvents TopPanel As Panel
     Friend WithEvents TopPanelHeader_Text As Label
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents CreateMilkTea_Btn As Button
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Check_CreamCheese As CheckBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Check_CreamPuff As CheckBox
-    Friend WithEvents Check_CocoJelly As CheckBox
-    Friend WithEvents Check_Pearl As CheckBox
     Friend WithEvents CheckOut_Btn As Button
     Friend WithEvents totalPrice_Label As Label
     Friend WithEvents totalPrice_Value As Label
     Friend WithEvents ClearTray_Btn As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents CreateMilkTea_Btn As Button
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Label3 As Label
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents CheckBox6 As CheckBox
-    Friend WithEvents CheckBox5 As CheckBox
-    Friend WithEvents CheckBox4 As CheckBox
     Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents CheckBox4 As CheckBox
+    Friend WithEvents CheckBox5 As CheckBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents RadioButton3 As RadioButton
+    Friend WithEvents RadioButton4 As RadioButton
+    Friend WithEvents RadioButton5 As RadioButton
+    Friend WithEvents Panel1 As Panel
 End Class

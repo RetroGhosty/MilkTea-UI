@@ -1,5 +1,5 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class MainWindow
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class Checkout_Form
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,13 +24,13 @@ Partial Class MainWindow
     Private Sub InitializeComponent()
         SuspendLayout()
         ' 
-        ' MainWindow
+        ' Checkout_Form
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
-        Name = "MainWindow"
-        Text = "MainWindow"
+        ClientSize = New Size(731, 450)
+        Name = "Checkout_Form"
+        Text = "Checkout_Form"
         ResumeLayout(False)
     End Sub
 End Class
