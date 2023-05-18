@@ -35,14 +35,8 @@ Partial Class OrderWindow
         ComboBox1 = New ComboBox()
         CreateMilkTea_Btn = New Button()
         Label1 = New Label()
-        ClearTray_Btn = New Button()
-        checkoutPnl = New Panel()
-        totalPrice_Value = New Label()
-        totalPrice_Label = New Label()
-        CheckOut_Btn = New Button()
         TopPanel.SuspendLayout()
         Panel1.SuspendLayout()
-        checkoutPnl.SuspendLayout()
         SuspendLayout()
         ' 
         ' TopPanel
@@ -80,7 +74,7 @@ Partial Class OrderWindow
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(0, 80)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(545, 346)
+        Panel1.Size = New Size(809, 346)
         Panel1.TabIndex = 2
         ' 
         ' Check_CreamPuff
@@ -183,65 +177,11 @@ Partial Class OrderWindow
         Label1.TabIndex = 0
         Label1.Text = "TYPE OF MILK TEA"
         ' 
-        ' ClearTray_Btn
-        ' 
-        ClearTray_Btn.Location = New Point(160, 6)
-        ClearTray_Btn.Name = "ClearTray_Btn"
-        ClearTray_Btn.Size = New Size(101, 40)
-        ClearTray_Btn.TabIndex = 11
-        ClearTray_Btn.Text = "Clear Tray"
-        ClearTray_Btn.UseVisualStyleBackColor = True
-        ' 
-        ' checkoutPnl
-        ' 
-        checkoutPnl.Controls.Add(ClearTray_Btn)
-        checkoutPnl.Controls.Add(totalPrice_Value)
-        checkoutPnl.Controls.Add(totalPrice_Label)
-        checkoutPnl.Controls.Add(CheckOut_Btn)
-        checkoutPnl.Dock = DockStyle.Fill
-        checkoutPnl.Location = New Point(545, 80)
-        checkoutPnl.Name = "checkoutPnl"
-        checkoutPnl.Size = New Size(264, 346)
-        checkoutPnl.TabIndex = 3
-        checkoutPnl.Visible = False
-        ' 
-        ' totalPrice_Value
-        ' 
-        totalPrice_Value.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        totalPrice_Value.AutoSize = True
-        totalPrice_Value.Font = New Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point)
-        totalPrice_Value.Location = New Point(19, 294)
-        totalPrice_Value.Name = "totalPrice_Value"
-        totalPrice_Value.Size = New Size(23, 28)
-        totalPrice_Value.TabIndex = 3
-        totalPrice_Value.Text = "0"
-        ' 
-        ' totalPrice_Label
-        ' 
-        totalPrice_Label.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        totalPrice_Label.AutoSize = True
-        totalPrice_Label.Location = New Point(19, 279)
-        totalPrice_Label.Name = "totalPrice_Label"
-        totalPrice_Label.Size = New Size(61, 15)
-        totalPrice_Label.TabIndex = 2
-        totalPrice_Label.Text = "Total Price"
-        ' 
-        ' CheckOut_Btn
-        ' 
-        CheckOut_Btn.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
-        CheckOut_Btn.Location = New Point(140, 279)
-        CheckOut_Btn.Name = "CheckOut_Btn"
-        CheckOut_Btn.Size = New Size(112, 43)
-        CheckOut_Btn.TabIndex = 1
-        CheckOut_Btn.Text = "Check Out"
-        CheckOut_Btn.UseVisualStyleBackColor = True
-        ' 
         ' OrderWindow
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(809, 426)
-        Controls.Add(checkoutPnl)
         Controls.Add(Panel1)
         Controls.Add(TopPanel)
         Name = "OrderWindow"
@@ -250,8 +190,6 @@ Partial Class OrderWindow
         TopPanel.PerformLayout()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        checkoutPnl.ResumeLayout(False)
-        checkoutPnl.PerformLayout()
         ResumeLayout(False)
     End Sub
     Friend WithEvents TopPanel As Panel
@@ -260,7 +198,6 @@ Partial Class OrderWindow
     Friend WithEvents Label1 As Label
     Friend WithEvents CreateMilkTea_Btn As Button
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents checkoutPnl As Panel
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Check_CreamCheese As CheckBox
@@ -268,8 +205,4 @@ Partial Class OrderWindow
     Friend WithEvents Check_CreamPuff As CheckBox
     Friend WithEvents Check_CocoJelly As CheckBox
     Friend WithEvents Check_Pearl As CheckBox
-    Friend WithEvents CheckOut_Btn As Button
-    Friend WithEvents totalPrice_Label As Label
-    Friend WithEvents totalPrice_Value As Label
-    Friend WithEvents ClearTray_Btn As Button
 End Class
