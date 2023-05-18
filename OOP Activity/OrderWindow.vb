@@ -7,7 +7,6 @@ Public Class OrderWindow
     Public ReturnPriceFunc As NecessaryFunctions
 
     Dim temp_TotalPrice
-    Public TheMenu As NecessaryFunctions
     Public UserOrder As List(Of OrderModel)
     Public UserAddOnsOrder As List(Of String)
     Public SweetenerPicked As String
@@ -22,78 +21,40 @@ Public Class OrderWindow
         'Setting UI color
         TopPanel.BackColor = colorSet.PrimaryColor
         TopPanelHeader_Text.ForeColor = colorSet.PrimaryText
+        Label1.ForeColor = colorSet.PrimaryText
+        Label2.ForeColor = colorSet.PrimaryText
+        Label3.ForeColor = colorSet.PrimaryText
+        Label4.ForeColor = colorSet.PrimaryText
+        Panel1.BackColor = colorSet.SecondaryColor
+
+        CheckBox1.ForeColor = colorSet.PrimaryText
+        CheckBox2.ForeColor = colorSet.PrimaryText
+        CheckBox3.ForeColor = colorSet.PrimaryText
+        CheckBox4.ForeColor = colorSet.PrimaryText
+        CheckBox5.ForeColor = colorSet.PrimaryText
+
+        RadioButton1.ForeColor = colorSet.PrimaryText
+        RadioButton2.ForeColor = colorSet.PrimaryText
+        RadioButton3.ForeColor = colorSet.PrimaryText
+        RadioButton4.ForeColor = colorSet.PrimaryText
+        RadioButton5.ForeColor = colorSet.PrimaryText
+
+        CreateMilkTea_Btn.BackColor = colorSet.PrimaryBtnColor
+        CreateMilkTea_Btn.ForeColor = colorSet.PrimaryText
+        ShowShoppingCart_Btn.BackColor = colorSet.SecondaryBtnColor
+        ShowShoppingCart_Btn.ForeColor = colorSet.SecondaryText
 
 
-        UserAddOnsOrder = New List(Of String)
+        Label5.ForeColor = colorSet.SecondaryText
+        Label20.ForeColor = colorSet.SecondaryText
+        Label27.ForeColor = colorSet.SecondaryText
+        Label38.ForeColor = colorSet.SecondaryText
 
 
+        NecessaryFunctions.ListThis()
+        NecessaryFunctions.SetMenuValue()
 
-        'Listing Different Milk Tea
-        Dim ThemilkTeaNames As New List(Of MilkTeaModel) From {
-            New MilkTeaModel("Classic Milk Tea", 50),
-            New MilkTeaModel("Pearl Milk Tea", 90),
-            New MilkTeaModel("Honey Milk Tea", 70),
-            New MilkTeaModel("Grass Jelly Milk Tea", 70),
-            New MilkTeaModel("Pudding Milk Tea", 40),
-            New MilkTeaModel("Red Bean Milk Tea", 50),
-            New MilkTeaModel("Aloe Vera Milk Tea", 90)
-        }
-
-        'Listing Different Sizes
-        Dim ThemilkTeaSizes As New List(Of SizesModel) From {
-            New SizesModel("Small", 20),
-            New SizesModel("Medium", 40),
-            New SizesModel("Large", 50)
-        }
-
-        'Listing Different Add-ons
-        Dim TheAddOns As New List(Of AddOnsMOdel) From {
-            New AddOnsMOdel("Cream cheese", 10),
-            New AddOnsMOdel("Boba Pearl", 10),
-            New AddOnsMOdel("Coco Jelly", 10),
-            New AddOnsMOdel("Cream Puff", 20),
-            New AddOnsMOdel("Nata de Coco", 30)
-        }
-
-        'Listing Different Sweetness
-        Dim SweetValue As New List(Of SweetnessModel) From {
-            New SweetnessModel("0%", 0),
-            New SweetnessModel("25%", 5),
-            New SweetnessModel("50%", 10),
-            New SweetnessModel("75%", 15),
-            New SweetnessModel("100%", 20)
-        }
-
-        'Store the lists to ItemStorage
-        ItemStorage.MilkTeaNameList = ThemilkTeaNames
-        ItemStorage.SizeList = ThemilkTeaSizes
-        ItemStorage.AddOnsList = TheAddOns
-        ItemStorage.SweetnessList = SweetValue
-
-        'Adding the list item to Combobox1
-        For Each eachMilkTea As MilkTeaModel In ThemilkTeaNames
-            ComboBox1.Items.Add(eachMilkTea.MilkTeaName)
-        Next
-
-        'Adding the list item to Combobox2
-        For Each eachSize As SizesModel In ThemilkTeaSizes
-            ComboBox2.Items.Add(eachSize.SizeName)
-        Next
-
-        'Modifying checkbox text from AddOn lists
-        CheckBox1.Text = ItemStorage.AddOnsList(0).NameOfAddOns
-        CheckBox2.Text = ItemStorage.AddOnsList(1).NameOfAddOns
-        CheckBox3.Text = ItemStorage.AddOnsList(2).NameOfAddOns
-        CheckBox4.Text = ItemStorage.AddOnsList(3).NameOfAddOns
-        CheckBox5.Text = ItemStorage.AddOnsList(4).NameOfAddOns
-
-        'Modifying checkbox text from Sweetener Lists
-        RadioButton1.Text = ItemStorage.SweetnessList(0).SweetNessText
-        RadioButton2.Text = ItemStorage.SweetnessList(1).SweetNessText
-        RadioButton3.Text = ItemStorage.SweetnessList(2).SweetNessText
-        RadioButton4.Text = ItemStorage.SweetnessList(3).SweetNessText
-        RadioButton5.Text = ItemStorage.SweetnessList(4).SweetNessText
-
+        UserOrder = New List(Of OrderModel)
     End Sub
 
 
@@ -101,20 +62,25 @@ Public Class OrderWindow
 
 
     Private Sub CreateMilkTea_Btn_Click(sender As Object, e As EventArgs) Handles CreateMilkTea_Btn.Click
-        UserOrder = New List(Of OrderModel)
+
+        Dim concatenatedString As String = String.Join(", ", UserAddOnsOrder)
 
         UserOrder.Add(New OrderModel(NecessaryFunctions.NewIdFromRandomInt,
                                      ComboBox1.SelectedItem,
                                      temp_TotalPrice,
                                      ComboBox2.SelectedItem,
-                                     UserAddOnsOrder,
+                                     concatenatedString,
                                      SweetenerPicked))
 
         ItemStorage.OrderList = UserOrder
-        Checkout_Form.Show()
+
     End Sub
 
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ShowShoppingCart_Btn.Click
+        If UserOrder IsNot Nothing Then
+            Checkout_Form.Show()
+        End If
+    End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
 
@@ -264,4 +230,5 @@ Public Class OrderWindow
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
         temp_TotalPrice = NecessaryFunctions.MilkTeaPriceBasedOnSize(ComboBox1.SelectedItem, ComboBox2.SelectedItem)
     End Sub
+
 End Class
