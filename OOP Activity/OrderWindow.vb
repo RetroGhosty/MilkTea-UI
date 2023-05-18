@@ -18,6 +18,7 @@ Public Class OrderWindow
         Check_Pearl.CheckState = False
         AddOnList.Clear()
         cart.ShoppingItem.Clear()
+
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -32,91 +33,8 @@ Public Class OrderWindow
         checkoutPnl.BackColor = colorSet.SecondaryBtnColor
         milkTeaPrice.SetAListOfMilkName()
     End Sub
-    Private Sub CheckOut_Btn_Click(sender As Object, e As EventArgs) Handles CheckOut_Btn.Click
-        Dim stringID = Guid.NewGuid.ToString("N").Substring(0, 15)
-        Dim getMilkTeaName = ComboBox1.SelectedText
-        Dim getMilkSize = ComboBox2.SelectedText
-        If cart Is Nothing Then
-            cart = New ShoppingCart()
-            cart.ShoppingItem = New List(Of OrderModel)
-        End If
-        cart.ShoppingItem.Add(New OrderModel(stringID, getMilkTeaName, tempMilkTeaPrice, getMilkSize, AddOnList))
-    End Sub
-    Private Sub CreateMilkTea_Btn_Clicked(sender As Object, e As EventArgs) Handles CreateMilkTea_Btn.Click
-        totalPrice_Value.Text = tempMilkTeaPrice
-        checkoutPnl.Visible = True
 
-    End Sub
-
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        tempMilkTeaPrice = milkTeaPrice.MilkTeaPriceBasedOnSize(ComboBox1.SelectedItem, ComboBox2.SelectedItem)
-    End Sub
-
-    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
-        tempMilkTeaPrice = milkTeaPrice.MilkTeaPriceBasedOnSize(ComboBox1.SelectedItem, ComboBox2.SelectedItem)
-        Check_CocoJelly.Checked = False
-        Check_CreamCheese.Checked = False
-        Check_CreamPuff.Checked = False
-        Check_Pearl.Checked = False
-
-    End Sub
+    ''START CODING BELOW
 
 
-
-
-    Private Sub Check_CreamCheese_CheckedChanged(sender As Object, e As EventArgs) Handles Check_CreamCheese.CheckedChanged
-        If Check_CreamCheese.Checked = True Then
-            tempMilkTeaPrice += milkTeaPrice.XtraCreamcheese
-            AddOnList.Add(New AddOns("Hello"))
-        Else
-            If tempMilkTeaPrice >= milkTeaPrice.XtraCreamcheese Then
-                tempMilkTeaPrice -= milkTeaPrice.XtraCreamcheese
-            End If
-        End If
-    End Sub
-
-    Private Sub Check_Pearl_CheckedChanged(sender As Object, e As EventArgs) Handles Check_Pearl.CheckedChanged
-        If Check_Pearl.Checked = True Then
-            tempMilkTeaPrice += milkTeaPrice.XtraPearl
-            AddOnList.Add(New AddOns("Hello"))
-        Else
-            If tempMilkTeaPrice >= milkTeaPrice.XtraPearl Then
-                tempMilkTeaPrice -= milkTeaPrice.XtraPearl
-            End If
-        End If
-
-    End Sub
-
-    Private Sub Check_CocoJelly_CheckedChanged(sender As Object, e As EventArgs) Handles Check_CocoJelly.CheckedChanged
-        If Check_CocoJelly.Checked = True Then
-            tempMilkTeaPrice += milkTeaPrice.XtraCocoJelly
-            AddOnList.Add(New AddOns("Hello"))
-        Else
-            If tempMilkTeaPrice >= milkTeaPrice.XtraCocoJelly Then
-                tempMilkTeaPrice -= milkTeaPrice.XtraCocoJelly
-            End If
-        End If
-
-    End Sub
-
-
-    Private Sub Check_CreamPuff_CheckedChanged(sender As Object, e As EventArgs) Handles Check_CreamPuff.CheckedChanged
-        If Check_CreamPuff.Checked = True Then
-            tempMilkTeaPrice += milkTeaPrice.XtraCreamPuff
-            AddOnList.Add(New AddOns("Hello"))
-        Else
-            If tempMilkTeaPrice >= milkTeaPrice.XtraCreamPuff Then
-                tempMilkTeaPrice -= milkTeaPrice.XtraCreamPuff
-            End If
-
-        End If
-    End Sub
-
-    Private Sub ClearTray_Btn_Click(sender As Object, e As EventArgs) Handles ClearTray_Btn.Click
-        ClearFields()
-    End Sub
-
-    Private Sub TopPanelHeader_Text_Click(sender As Object, e As EventArgs) Handles TopPanelHeader_Text.Click
-
-    End Sub
 End Class
