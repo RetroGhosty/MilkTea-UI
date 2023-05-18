@@ -36,10 +36,5 @@ Public Class OrderWindow
 
     ''START CODING BELOW
 
-    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-    'heloooooooooooooowwwwwwww'
-
-    'heloooooooooo din'
 
 End Class
