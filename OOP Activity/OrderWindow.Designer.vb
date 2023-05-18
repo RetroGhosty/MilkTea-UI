@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class OrderWindow
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -25,6 +25,7 @@ Partial Class Form1
         TopPanel = New Panel()
         TopPanelHeader_Text = New Label()
         Panel1 = New Panel()
+        Button2 = New Button()
         Check_CreamPuff = New CheckBox()
         Check_CocoJelly = New CheckBox()
         Check_Pearl = New CheckBox()
@@ -36,6 +37,9 @@ Partial Class Form1
         Button1 = New Button()
         Label1 = New Label()
         checkoutPnl = New Panel()
+        Label4 = New Label()
+        totalPrice_Value = New Label()
+        totalPrice_Label = New Label()
         checkOut_Btn = New Button()
         TopPanel.SuspendLayout()
         Panel1.SuspendLayout()
@@ -64,6 +68,7 @@ Partial Class Form1
         ' 
         ' Panel1
         ' 
+        Panel1.Controls.Add(Button2)
         Panel1.Controls.Add(Check_CreamPuff)
         Panel1.Controls.Add(Check_CocoJelly)
         Panel1.Controls.Add(Check_Pearl)
@@ -79,6 +84,15 @@ Partial Class Form1
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(545, 346)
         Panel1.TabIndex = 2
+        ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(140, 16)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(115, 30)
+        Button2.TabIndex = 11
+        Button2.Text = "Clear fields"
+        Button2.UseVisualStyleBackColor = True
         ' 
         ' Check_CreamPuff
         ' 
@@ -182,6 +196,9 @@ Partial Class Form1
         ' 
         ' checkoutPnl
         ' 
+        checkoutPnl.Controls.Add(Label4)
+        checkoutPnl.Controls.Add(totalPrice_Value)
+        checkoutPnl.Controls.Add(totalPrice_Label)
         checkoutPnl.Controls.Add(checkOut_Btn)
         checkoutPnl.Dock = DockStyle.Fill
         checkoutPnl.Location = New Point(545, 80)
@@ -190,16 +207,47 @@ Partial Class Form1
         checkoutPnl.TabIndex = 3
         checkoutPnl.Visible = False
         ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(19, 24)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(41, 15)
+        Label4.TabIndex = 4
+        Label4.Text = "Label4"
+        ' 
+        ' totalPrice_Value
+        ' 
+        totalPrice_Value.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        totalPrice_Value.AutoSize = True
+        totalPrice_Value.Font = New Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point)
+        totalPrice_Value.Location = New Point(19, 294)
+        totalPrice_Value.Name = "totalPrice_Value"
+        totalPrice_Value.Size = New Size(23, 28)
+        totalPrice_Value.TabIndex = 3
+        totalPrice_Value.Text = "0"
+        ' 
+        ' totalPrice_Label
+        ' 
+        totalPrice_Label.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        totalPrice_Label.AutoSize = True
+        totalPrice_Label.Location = New Point(19, 279)
+        totalPrice_Label.Name = "totalPrice_Label"
+        totalPrice_Label.Size = New Size(61, 15)
+        totalPrice_Label.TabIndex = 2
+        totalPrice_Label.Text = "Total Price"
+        ' 
         ' checkOut_Btn
         ' 
-        checkOut_Btn.Location = New Point(177, 311)
+        checkOut_Btn.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
+        checkOut_Btn.Location = New Point(140, 279)
         checkOut_Btn.Name = "checkOut_Btn"
-        checkOut_Btn.Size = New Size(75, 23)
+        checkOut_Btn.Size = New Size(112, 43)
         checkOut_Btn.TabIndex = 1
         checkOut_Btn.Text = "Check Out"
         checkOut_Btn.UseVisualStyleBackColor = True
         ' 
-        ' Form1
+        ' OrderWindow
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
@@ -207,13 +255,14 @@ Partial Class Form1
         Controls.Add(checkoutPnl)
         Controls.Add(Panel1)
         Controls.Add(TopPanel)
-        Name = "Form1"
+        Name = "OrderWindow"
         Text = "Form1"
         TopPanel.ResumeLayout(False)
         TopPanel.PerformLayout()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         checkoutPnl.ResumeLayout(False)
+        checkoutPnl.PerformLayout()
         ResumeLayout(False)
     End Sub
     Friend WithEvents TopPanel As Panel
@@ -231,4 +280,8 @@ Partial Class Form1
     Friend WithEvents Check_CocoJelly As CheckBox
     Friend WithEvents Check_Pearl As CheckBox
     Friend WithEvents checkOut_Btn As Button
+    Friend WithEvents totalPrice_Label As Label
+    Friend WithEvents totalPrice_Value As Label
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Label4 As Label
 End Class

@@ -1,10 +1,8 @@
 ﻿Public Class AddOns
-    Public Property xtraPearl As String
-    Public Property xtraCreamcheese As String
-    Public Property xtraCocoJelly As String
-    Public Property xtraCreamPuff As String
+    Public Property NameOfAddOns As String
 
-
-
+    Public Sub New(ByVal _NameOfAddOns As String)
+        NameOfAddOns = _NameOfAddOns
+    End Sub
 
 End Class
