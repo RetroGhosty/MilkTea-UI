@@ -7,10 +7,17 @@ Public Class OrderWindow
     Public cart As ShoppingCart
 
     Private Sub ClearFields()
+        If cart Is Nothing Then
+            cart = New ShoppingCart()
+            cart.ShoppingItem = New List(Of OrderModel)
+        End If
+
         Check_CocoJelly.CheckState = False
         Check_CreamCheese.CheckState = False
         Check_CreamPuff.CheckState = False
         Check_Pearl.CheckState = False
+        AddOnList.Clear()
+        cart.ShoppingItem.Clear()
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -23,11 +30,9 @@ Public Class OrderWindow
         TopPanel.BackColor = colorSet.PrimaryColor
         TopPanelHeader_Text.ForeColor = colorSet.PrimaryText
         checkoutPnl.BackColor = colorSet.SecondaryBtnColor
-
-        milkTeaPrice.setAListOfMilkName()
-
+        milkTeaPrice.SetAListOfMilkName()
     End Sub
-    Private Sub checkOut_Btn_Click(sender As Object, e As EventArgs) Handles checkOut_Btn.Click
+    Private Sub CheckOut_Btn_Click(sender As Object, e As EventArgs) Handles CheckOut_Btn.Click
         Dim stringID = Guid.NewGuid.ToString("N").Substring(0, 15)
         Dim getMilkTeaName = ComboBox1.SelectedText
         Dim getMilkSize = ComboBox2.SelectedText
@@ -36,17 +41,19 @@ Public Class OrderWindow
             cart.ShoppingItem = New List(Of OrderModel)
         End If
         cart.ShoppingItem.Add(New OrderModel(stringID, getMilkTeaName, tempMilkTeaPrice, getMilkSize, AddOnList))
-
-        Label4.Text = cart.ShoppingItem(0).MilkTeaPrice
+    End Sub
+    Private Sub CreateMilkTea_Btn_Clicked(sender As Object, e As EventArgs) Handles CreateMilkTea_Btn.Click
+        totalPrice_Value.Text = tempMilkTeaPrice
+        checkoutPnl.Visible = True
 
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        tempMilkTeaPrice = milkTeaPrice.milkTeaPriceBasedOnSize(ComboBox1.SelectedItem, ComboBox2.SelectedItem)
+        tempMilkTeaPrice = milkTeaPrice.MilkTeaPriceBasedOnSize(ComboBox1.SelectedItem, ComboBox2.SelectedItem)
     End Sub
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
-        tempMilkTeaPrice = milkTeaPrice.milkTeaPriceBasedOnSize(ComboBox1.SelectedItem, ComboBox2.SelectedItem)
+        tempMilkTeaPrice = milkTeaPrice.MilkTeaPriceBasedOnSize(ComboBox1.SelectedItem, ComboBox2.SelectedItem)
         Check_CocoJelly.Checked = False
         Check_CreamCheese.Checked = False
         Check_CreamPuff.Checked = False
@@ -55,11 +62,6 @@ Public Class OrderWindow
     End Sub
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        totalPrice_Value.Text = tempMilkTeaPrice
-        checkoutPnl.Visible = True
-
-    End Sub
 
 
     Private Sub Check_CreamCheese_CheckedChanged(sender As Object, e As EventArgs) Handles Check_CreamCheese.CheckedChanged
@@ -110,7 +112,7 @@ Public Class OrderWindow
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub ClearTray_Btn_Click(sender As Object, e As EventArgs) Handles ClearTray_Btn.Click
         ClearFields()
     End Sub
 End Class

@@ -25,7 +25,7 @@ Partial Class OrderWindow
         TopPanel = New Panel()
         TopPanelHeader_Text = New Label()
         Panel1 = New Panel()
-        Button2 = New Button()
+        ClearTray_Btn = New Button()
         Check_CreamPuff = New CheckBox()
         Check_CocoJelly = New CheckBox()
         Check_Pearl = New CheckBox()
@@ -34,13 +34,12 @@ Partial Class OrderWindow
         ComboBox2 = New ComboBox()
         Label2 = New Label()
         ComboBox1 = New ComboBox()
-        Button1 = New Button()
+        CreateMilkTea_Btn = New Button()
         Label1 = New Label()
         checkoutPnl = New Panel()
-        Label4 = New Label()
         totalPrice_Value = New Label()
         totalPrice_Label = New Label()
-        checkOut_Btn = New Button()
+        CheckOut_Btn = New Button()
         TopPanel.SuspendLayout()
         Panel1.SuspendLayout()
         checkoutPnl.SuspendLayout()
@@ -68,7 +67,6 @@ Partial Class OrderWindow
         ' 
         ' Panel1
         ' 
-        Panel1.Controls.Add(Button2)
         Panel1.Controls.Add(Check_CreamPuff)
         Panel1.Controls.Add(Check_CocoJelly)
         Panel1.Controls.Add(Check_Pearl)
@@ -77,7 +75,7 @@ Partial Class OrderWindow
         Panel1.Controls.Add(ComboBox2)
         Panel1.Controls.Add(Label2)
         Panel1.Controls.Add(ComboBox1)
-        Panel1.Controls.Add(Button1)
+        Panel1.Controls.Add(CreateMilkTea_Btn)
         Panel1.Controls.Add(Label1)
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(0, 80)
@@ -85,14 +83,14 @@ Partial Class OrderWindow
         Panel1.Size = New Size(545, 346)
         Panel1.TabIndex = 2
         ' 
-        ' Button2
+        ' ClearTray_Btn
         ' 
-        Button2.Location = New Point(140, 16)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(115, 30)
-        Button2.TabIndex = 11
-        Button2.Text = "Clear fields"
-        Button2.UseVisualStyleBackColor = True
+        ClearTray_Btn.Location = New Point(160, 6)
+        ClearTray_Btn.Name = "ClearTray_Btn"
+        ClearTray_Btn.Size = New Size(101, 40)
+        ClearTray_Btn.TabIndex = 11
+        ClearTray_Btn.Text = "Clear Tray"
+        ClearTray_Btn.UseVisualStyleBackColor = True
         ' 
         ' Check_CreamPuff
         ' 
@@ -174,14 +172,14 @@ Partial Class OrderWindow
         ComboBox1.Size = New Size(223, 23)
         ComboBox1.TabIndex = 3
         ' 
-        ' Button1
+        ' CreateMilkTea_Btn
         ' 
-        Button1.Location = New Point(19, 16)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(115, 30)
-        Button1.TabIndex = 2
-        Button1.Text = "Create Milk Tea"
-        Button1.UseVisualStyleBackColor = True
+        CreateMilkTea_Btn.Location = New Point(19, 16)
+        CreateMilkTea_Btn.Name = "CreateMilkTea_Btn"
+        CreateMilkTea_Btn.Size = New Size(115, 30)
+        CreateMilkTea_Btn.TabIndex = 2
+        CreateMilkTea_Btn.Text = "Create Milk Tea"
+        CreateMilkTea_Btn.UseVisualStyleBackColor = True
         ' 
         ' Label1
         ' 
@@ -196,25 +194,16 @@ Partial Class OrderWindow
         ' 
         ' checkoutPnl
         ' 
-        checkoutPnl.Controls.Add(Label4)
+        checkoutPnl.Controls.Add(ClearTray_Btn)
         checkoutPnl.Controls.Add(totalPrice_Value)
         checkoutPnl.Controls.Add(totalPrice_Label)
-        checkoutPnl.Controls.Add(checkOut_Btn)
+        checkoutPnl.Controls.Add(CheckOut_Btn)
         checkoutPnl.Dock = DockStyle.Fill
         checkoutPnl.Location = New Point(545, 80)
         checkoutPnl.Name = "checkoutPnl"
         checkoutPnl.Size = New Size(264, 346)
         checkoutPnl.TabIndex = 3
         checkoutPnl.Visible = False
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Location = New Point(19, 24)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(41, 15)
-        Label4.TabIndex = 4
-        Label4.Text = "Label4"
         ' 
         ' totalPrice_Value
         ' 
@@ -237,15 +226,15 @@ Partial Class OrderWindow
         totalPrice_Label.TabIndex = 2
         totalPrice_Label.Text = "Total Price"
         ' 
-        ' checkOut_Btn
+        ' CheckOut_Btn
         ' 
-        checkOut_Btn.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
-        checkOut_Btn.Location = New Point(140, 279)
-        checkOut_Btn.Name = "checkOut_Btn"
-        checkOut_Btn.Size = New Size(112, 43)
-        checkOut_Btn.TabIndex = 1
-        checkOut_Btn.Text = "Check Out"
-        checkOut_Btn.UseVisualStyleBackColor = True
+        CheckOut_Btn.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
+        CheckOut_Btn.Location = New Point(140, 279)
+        CheckOut_Btn.Name = "CheckOut_Btn"
+        CheckOut_Btn.Size = New Size(112, 43)
+        CheckOut_Btn.TabIndex = 1
+        CheckOut_Btn.Text = "Check Out"
+        CheckOut_Btn.UseVisualStyleBackColor = True
         ' 
         ' OrderWindow
         ' 
@@ -269,7 +258,7 @@ Partial Class OrderWindow
     Friend WithEvents TopPanelHeader_Text As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents CreateMilkTea_Btn As Button
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents checkoutPnl As Panel
     Friend WithEvents ComboBox2 As ComboBox
@@ -279,9 +268,8 @@ Partial Class OrderWindow
     Friend WithEvents Check_CreamPuff As CheckBox
     Friend WithEvents Check_CocoJelly As CheckBox
     Friend WithEvents Check_Pearl As CheckBox
-    Friend WithEvents checkOut_Btn As Button
+    Friend WithEvents CheckOut_Btn As Button
     Friend WithEvents totalPrice_Label As Label
     Friend WithEvents totalPrice_Value As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Label4 As Label
+    Friend WithEvents ClearTray_Btn As Button
 End Class
