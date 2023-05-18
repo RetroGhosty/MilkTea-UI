@@ -115,4 +115,8 @@ Public Class OrderWindow
     Private Sub ClearTray_Btn_Click(sender As Object, e As EventArgs) Handles ClearTray_Btn.Click
         ClearFields()
     End Sub
+
+    Private Sub TopPanelHeader_Text_Click(sender As Object, e As EventArgs) Handles TopPanelHeader_Text.Click
+
+    End Sub
 End Class

@@ -25,7 +25,6 @@ Partial Class OrderWindow
         TopPanel = New Panel()
         TopPanelHeader_Text = New Label()
         Panel1 = New Panel()
-        ClearTray_Btn = New Button()
         Check_CreamPuff = New CheckBox()
         Check_CocoJelly = New CheckBox()
         Check_Pearl = New CheckBox()
@@ -36,6 +35,7 @@ Partial Class OrderWindow
         ComboBox1 = New ComboBox()
         CreateMilkTea_Btn = New Button()
         Label1 = New Label()
+        ClearTray_Btn = New Button()
         checkoutPnl = New Panel()
         totalPrice_Value = New Label()
         totalPrice_Label = New Label()
@@ -61,9 +61,9 @@ Partial Class OrderWindow
         TopPanelHeader_Text.Font = New Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point)
         TopPanelHeader_Text.Location = New Point(12, 23)
         TopPanelHeader_Text.Name = "TopPanelHeader_Text"
-        TopPanelHeader_Text.Size = New Size(140, 37)
+        TopPanelHeader_Text.Size = New Size(204, 37)
         TopPanelHeader_Text.TabIndex = 0
-        TopPanelHeader_Text.Text = "MILK TEA"
+        TopPanelHeader_Text.Text = "It's Boba time!"
         ' 
         ' Panel1
         ' 
@@ -82,15 +82,6 @@ Partial Class OrderWindow
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(545, 346)
         Panel1.TabIndex = 2
-        ' 
-        ' ClearTray_Btn
-        ' 
-        ClearTray_Btn.Location = New Point(160, 6)
-        ClearTray_Btn.Name = "ClearTray_Btn"
-        ClearTray_Btn.Size = New Size(101, 40)
-        ClearTray_Btn.TabIndex = 11
-        ClearTray_Btn.Text = "Clear Tray"
-        ClearTray_Btn.UseVisualStyleBackColor = True
         ' 
         ' Check_CreamPuff
         ' 
@@ -191,6 +182,15 @@ Partial Class OrderWindow
         Label1.Size = New Size(186, 30)
         Label1.TabIndex = 0
         Label1.Text = "TYPE OF MILK TEA"
+        ' 
+        ' ClearTray_Btn
+        ' 
+        ClearTray_Btn.Location = New Point(160, 6)
+        ClearTray_Btn.Name = "ClearTray_Btn"
+        ClearTray_Btn.Size = New Size(101, 40)
+        ClearTray_Btn.TabIndex = 11
+        ClearTray_Btn.Text = "Clear Tray"
+        ClearTray_Btn.UseVisualStyleBackColor = True
         ' 
         ' checkoutPnl
         ' 
