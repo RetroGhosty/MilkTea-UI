@@ -22,6 +22,7 @@ Public Class OrderWindow
         'Setting UI color
         TopPanel.BackColor = colorSet.PrimaryColor
         TopPanelHeader_Text.ForeColor = colorSet.PrimaryText
+        checkoutPnl.BackColor = colorSet.SecondaryBtnColor
 
         Dim ViewModelOrder As ItemStorage = New ItemStorage()
         Dim milkTeaNames As List(Of TypeOfMilkTea) = ViewModelOrder.MilkTeaNameList
@@ -32,6 +33,18 @@ Public Class OrderWindow
 
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox2.CheckedChanged
 
     End Sub
 
